@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Django Icon Auth</title>
+    <style>
+        .a-primary {
+            color: #148c9a;
+        }
+        .btn-outline-primary.custom-btn {
+            color: #148c9a;
+            background-color: #fff;
+            border-color: #1aaaba;
+            box-shadow: none !important;
+        }
+        .btn-outline-primary.custom-btn:hover, .btn-outline-primary.custom-btn:active {
+            color: #fff !important;
+            background-color: #1aaaba !important;
+            border-color: #1aaaba !important;
+            box-shadow: none !important;
+        }
+        input:focus, textarea:focus {
+            border-color: #1aaaba !important;
+            outline: none !important;
+            box-shadow: none !important;
+            -webkit-box-shadow: none !important;
+        }
+        </style>    
+  </head>
+  <body>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-6">
+          <h1 class="mt-2">Django Icon Auth</h1>
+          <hr class="mt-0 mb-4">
+            <div>
+                <p>Authenticate via your Icon wallet</p>
+                <p>{{ user }}.</p>
+                <p><a href="{% url 'logout' %}" class-""><button id="request-signing" type="button" class="btn btn-outline-primary custom-btn">Logout</button></a></p>          
+                <div id="response-address" class="mt-3 ml-3 mb-3"></div>       
+            </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
