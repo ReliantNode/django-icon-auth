@@ -29,7 +29,8 @@ def login_view(request, template_name='iconauth/login.html'):
         return render(request, template_name, {'form' : form,'login_token' : token})
 
     else:
-        token = ''.join(random.choice('0123456789abcdef') for n in range(64))
+        zeros = '0' * 32
+        token = ''.join(random.choice('0123456789abcdef') for n in range(32)) + zeros
         request.session['login_token'] = token
         form = LoginForm(token)
         
